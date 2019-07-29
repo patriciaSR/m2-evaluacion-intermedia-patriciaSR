@@ -7,20 +7,21 @@ const counter = document.querySelector('.counter');
 
 let attemps = 0;
 
-
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 
+const randomNumber = getRandomNumber(100);
+console.log(randomNumber);
 
 function updateNumber(event) {
-  const numberInput = number.value;
-  
-  if (numberInput > getRandomNumber(100)) {
+  const numberInput = parseInt(number.value);
+
+  if (numberInput > randomNumber) {
     clue.innerHTML = 'demasiado alto';
     attemps++;
     counter.innerHTML = attemps;
-  } else if (numberInput < getRandomNumber(100)) {
+  } else if (numberInput < randomNumber) {
     clue.innerHTML = 'demasiado bajo';
     attemps++;
     counter.innerHTML = attemps;
