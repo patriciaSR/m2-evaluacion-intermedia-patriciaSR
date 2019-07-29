@@ -2,6 +2,7 @@
 
 const number = document.querySelector('.input__number');
 const btn = document.querySelector('.btn')
+const clue = document.querySelector ('.clue__text')
 
 
 
@@ -10,8 +11,16 @@ function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 
-fuction updateNumber {
-  
+function updateNumber() {
+  const numberInput = number.value;
+  if (numberInput > getRandomNumber(100)) {
+    clue.innerHTML = 'demasiado alto';
+  } else if (numberInput < getRandomNumber(100)) {
+    clue.innerHTML = 'demasiado bajo';
+  }else {
+    clue.innerHTML = '¡HAS GANADO, CAMPEONA!';
+  }
+
 }
 
 btn.addEventListener('click', updateNumber);
