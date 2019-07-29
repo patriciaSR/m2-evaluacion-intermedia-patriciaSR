@@ -4,10 +4,34 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  background-color: #dbc9c9;
+  margin: 0;
+}
+.input__container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .input__number {
   display: block;
+  margin: 10px 0;
+}
+.btn {
+  border:none;
+  padding: 5px 0;
+  background-color: white;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.32);
 }
 .counter {
   display: block;
+  color: red;
+  font-size: 100px;
+}
+.clue__text {
+  width: auto;
+  text-align: center;
+  border: solid 1px blue;
+  color: blue;
+  padding: 20px 150px;
 }
