@@ -16,17 +16,19 @@ function getRandomNumber(max) {
 function updateNumber(event) {
   const numberInput = number.value;
 
+
   if (numberInput > getRandomNumber(100)) {
     clue.innerHTML = 'demasiado alto';
     attemps++;
     counter.innerHTML = attemps;
-
   } else if (numberInput < getRandomNumber(100)) {
     clue.innerHTML = 'demasiado bajo';
     attemps++;
     counter.innerHTML = attemps;
   } else {
     clue.innerHTML = '¡HAS GANADO, CAMPEONA!';
+    attemps = 0;
+    counter.innerHTML = attemps;
   }
 
 
