@@ -14,21 +14,29 @@ function getRandomNumber(max) {
 const randomNumber = getRandomNumber(100);
 console.log(randomNumber);
 
+function clueText(text) {
+  clue.innerHTML = text;
+}
+
+function counterResult(num) {
+  counter.innerHTML = num;
+}
+
 function updateNumber(event) {
   const numberInput = parseInt(number.value);
 
   if (numberInput > randomNumber) {
-    clue.innerHTML = 'demasiado alto';
+    clueText('demasiado alto');
     attemps++;
-    counter.innerHTML = attemps;
+    counterResult(attemps);
   } else if (numberInput < randomNumber) {
-    clue.innerHTML = 'demasiado bajo';
+    clueText('demasiado bajo');
     attemps++;
-    counter.innerHTML = attemps;
+    counterResult(attemps);
   } else {
-    clue.innerHTML = '¡HAS GANADO, CAMPEONA!';
+    clueText('¡HAS GANADO, CAMPEONA!');
     attemps = 0;
-    counter.innerHTML = attemps;
+    counterResult(attemps);
   }
 }
 
