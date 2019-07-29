@@ -15,7 +15,7 @@ function getRandomNumber(max) {
 
 function updateNumber(event) {
   const numberInput = number.value;
-
+  
   if (numberInput > getRandomNumber(100)) {
     clue.innerHTML = 'demasiado alto';
     attemps++;

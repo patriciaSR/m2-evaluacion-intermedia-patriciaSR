@@ -27,6 +27,9 @@
   display: block;
   color: red;
   font-size: 100px;
+  position: absolute;
+  top: 0;
+  right: 50px;
 }
 .clue__text {
   width: auto;
