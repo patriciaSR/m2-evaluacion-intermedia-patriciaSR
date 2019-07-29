@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,17 @@
   <link rel="stylesheet" href="css/main.css">
   <title>Adivina el número</title>
 </head>
-<body>
-  <h1 class="tittle"></h1>
+
+<body class= "page__body">
+  <h1 class="page__tittle">Adivina el número</h1>
+  <div class="input__container">
+    <label for="number" class="input__description">Introduce aquí tu número</label>
+    <input id="number" type="number" class="input__number">
+    <button class="btn">Prueba</button>
+  </div>
+  <span class="counter">0</span>
+  <p class="clue__text">Escribe un número y dale a Prueba</p>
   <script src="js/main.js"></script>
 </body>
+
 </html>
