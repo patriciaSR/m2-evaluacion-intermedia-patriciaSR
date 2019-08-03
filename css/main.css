@@ -20,6 +20,7 @@
 .btn {
   border:none;
   padding: 5px 0;
+  margin-bottom: 15px;
   background-color: white;
   box-shadow: 0 0 4px 0 rgba(0,0,0,0.32);
 }
@@ -36,4 +37,27 @@
   border: solid 1px blue;
   color: blue;
   padding: 20px 150px;
+}
+
+.alert-box {
+ background-color: yellowgreen;
+ box-shadow: 0 0 4px 0 rgba(0,0,0,0.32);
+ padding: 15px;
+ width: 180px;
+ position: relative;
+}
+.alert-box::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -10px;
+  left: 45%;
+  transform: translateY(-50%);
+  transform: rotate(45deg);
+  background-color: yellowgreen;
+ }
+
+.hidden {
+  display: none;
 }
