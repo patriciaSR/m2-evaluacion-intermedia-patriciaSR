@@ -64,6 +64,7 @@ function enterKey() {
 
 function resetGame() {
   attemps = 0;
+  counterResult(attemps);
   number.value = "";
   clueText('Escribe un número y dale a Prueba!');
   randomNumber = getRandomNumber(100);
