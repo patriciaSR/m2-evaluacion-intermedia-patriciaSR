@@ -19,24 +19,32 @@
 }
 .btn {
   border:none;
-  padding: 5px 0;
+  padding: 10px;
   margin-bottom: 15px;
   background-color: white;
   box-shadow: 0 0 4px 0 rgba(0,0,0,0.32);
 }
+.counter-box {
+  text-align: center;
+}
+@media all and (min-width: 700px){
+  .counter-box {
+    position: absolute;
+    top: 0;
+    right: 50px;
+  }
+}
+
 .counter {
   display: block;
   color: red;
   font-size: 100px;
-  position: absolute;
-  top: 0;
-  right: 50px;
 }
 .clue__text {
   text-align: center;
   border: solid 1px blue;
   color: blue;
-  padding: 20px 150px;
+  padding: 15px 30px;
 }
 
 .alert-box {
@@ -57,7 +65,6 @@
   transform: rotate(45deg);
   background-color: yellowgreen;
  }
-
 .hidden {
   display: none;
 }

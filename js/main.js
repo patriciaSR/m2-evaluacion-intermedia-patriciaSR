@@ -1,8 +1,9 @@
 'use strict';
 
 const number = document.querySelector('.input__number');
-const btn = document.querySelector('.btn')
-const clue = document.querySelector('.clue__text')
+const btn = document.querySelector('.play-btn');
+const resetBtn = document.querySelector('.reset-btn');
+const clue = document.querySelector('.clue__text');
 const counter = document.querySelector('.counter');
 const alertBox = document.querySelector('.alert-box');
 
@@ -12,16 +13,16 @@ function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 
-const randomNumber = getRandomNumber(100);
+let randomNumber = getRandomNumber(100);
 console.log(randomNumber);
 
 function clueText(text) {
   clue.innerHTML = text;
 }
+
 function alertText(text) {
   alertBox.innerHTML = text;
 }
-
 
 function counterResult(num) {
   counter.innerHTML = num;
@@ -61,6 +62,15 @@ function enterKey() {
   }
 }
 
+function resetGame() {
+  attemps = 0;
+  number.value = "";
+  clueText('Escribe un número y dale a Prueba!');
+  randomNumber = getRandomNumber(100);
+  console.log(randomNumber);
+}
+
 
 btn.addEventListener('click', updateNumber);
 number.addEventListener('keyup', enterKey);
+resetBtn.addEventListener('click', resetGame);
