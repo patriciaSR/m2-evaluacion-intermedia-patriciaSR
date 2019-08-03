@@ -30,7 +30,7 @@ function counterResult(num) {
 function updateNumber(event) {
   const numberInput = parseInt(number.value);
 
-  if (!numberInput){
+  if (!numberInput) {
     alertBox.classList.remove('hidden');
     alertText('Introduce un número para empezar a jugar :)');
   } else if (numberInput < 0 || numberInput > 100) {
@@ -55,4 +55,12 @@ function updateNumber(event) {
   }
 }
 
+function enterKey() {
+  if (event.keyCode === 13) {
+    updateNumber();
+  }
+}
+
+
 btn.addEventListener('click', updateNumber);
+number.addEventListener('keyup', enterKey);
