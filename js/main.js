@@ -30,7 +30,10 @@ function counterResult(num) {
 function updateNumber(event) {
   const numberInput = parseInt(number.value);
 
-  if (numberInput < 0 || numberInput > 100) {
+  if (!numberInput){
+    alertBox.classList.remove('hidden');
+    alertText('Introduce un número para empezar a jugar :)');
+  } else if (numberInput < 0 || numberInput > 100) {
     alertBox.classList.remove('hidden');
     alertText('El número introducido tiene que ser entre 0 y 100');
   } else {
