@@ -52,6 +52,8 @@ function updateNumber(event) {
       clueText('¡HAS GANADO, CAMPEONA!');
       attemps = 0;
       counterResult(attemps);
+      btn.disabled = true;
+
     }
   }
 }
@@ -63,6 +65,7 @@ function enterKey() {
 }
 
 function resetGame() {
+  btn.disabled = false;
   attemps = 0;
   counterResult(attemps);
   number.value = "";
